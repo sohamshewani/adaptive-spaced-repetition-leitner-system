@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This script runs all unit and integration tests for the adaptive-spaced-repetition-leitner-system in C.
+
+# Navigate to the root directory of the project
+SCRIPT_DIR=$( cd -- $( dirname -- "$BASH_SOURCE"{,/*} ) &> /dev/null && pwd )
+cd $SCRIPT_DIR/../
+
+# Run unit tests
+make check
+
+# Run integration tests
+make test
